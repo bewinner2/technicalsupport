@@ -28,18 +28,18 @@ public class SiteApiController {
         return new Result(collect);
     }
 
-//    @PostMapping("/api/registerSite")
-//    public CreateSiteResponse saveSite(@RequestBody @Valid CreateSiteRequest request) {
-//
-//        Site site = new Site();
-//        site.setSite_name(request.getSite_name());
-//        site.setEmployee_name(request.getEmployee_name());
-//        site.setPhone_number(request.getPhone_number());
-//        site.setAddress(request.getAddress());
-//
-//        Long id = siteService.join(site);
-//        return new CreateSiteResponse(id);
-//    }
+    @PostMapping("/api/registerSite")
+    public CreateSiteResponse saveSite(@RequestBody @Valid CreateSiteRequest request) {
+
+        Site site = new Site();
+        site.setSite_name(request.getSite_name());
+        site.setEmployee_name(request.getEmployee_name());
+        site.setPhone_number(request.getPhone_number());
+        site.setAddress(request.getAddress());
+
+        Long id = siteService.join(site);
+        return new CreateSiteResponse(id);
+    }
 
     @PutMapping("/api/v2/site/{id}")
     public UpdateSiteResponse updateSiteV2(@PathVariable("id") Long id, @RequestBody @Valid UpdateSiteRequest request) {
