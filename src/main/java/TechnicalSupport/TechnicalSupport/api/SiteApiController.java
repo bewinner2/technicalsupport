@@ -41,12 +41,21 @@ public class SiteApiController {
         return new CreateSiteResponse(id);
     }
 
+<<<<<<< HEAD
     @PutMapping("/api/v2/site/{id}")
     public UpdateSiteResponse updateSiteV2(@PathVariable("id") Long id, @RequestBody @Valid UpdateSiteRequest request) {
         siteService.update(id, request.getName());
         Site findSite = siteService.findOne(id);
         return new UpdateSiteResponse(findSite.getId(), findSite.getSite_name());
     }
+=======
+//    @PutMapping("/api/v2/site/{id}")
+//    public UpdateSiteResponse updateSiteV2(@PathVariable("id") Long id, @RequestBody @Valid UpdateSiteRequest request) {
+//        siteService.update(id, request.getName());
+//        Site findSite = siteService.findOne(id);
+//        return new UpdateSiteResponse(findSite.getId(), findSite.getSite_name());
+//    }
+>>>>>>> parent of 63c70a2 (Revert "Revert "postmapping주석처리"")
 
     @Data
     @AllArgsConstructor
