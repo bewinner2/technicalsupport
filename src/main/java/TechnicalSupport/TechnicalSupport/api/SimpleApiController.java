@@ -54,7 +54,7 @@ public class SimpleApiController {
 //        private OrderStatus siteStatus;
 //        private Address address;
 
-        private Long siteId;
+        private Long siteId;   //siteId 주석추가 3번째         얹혀서 4번째 추가또!!
         private String site_name;
         private String employee_name;
         private String phone_number;
