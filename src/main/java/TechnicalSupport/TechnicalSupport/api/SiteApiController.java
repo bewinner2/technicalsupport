@@ -16,7 +16,7 @@ public class SiteApiController {
 
     private final SiteService siteService;
 
-    private int pushtest;
+    private int pulltest;
 
 
 
