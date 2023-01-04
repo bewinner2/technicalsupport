@@ -58,7 +58,7 @@ public class SimpleApiController {
         private String site_name;
         private String employee_name;
         private String phone_number;
-        private String address;
+        private String address;  //Main
 
         private String Geospace_Version;
 
