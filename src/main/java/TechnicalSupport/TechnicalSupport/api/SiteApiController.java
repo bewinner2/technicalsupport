@@ -16,6 +16,12 @@ public class SiteApiController {
 
     private final SiteService siteService;
 
+    private int news;
+
+
+
+
+
     @GetMapping("/api/getSite")
     public Result getSite() {
 
