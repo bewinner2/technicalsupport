@@ -60,7 +60,7 @@ public class SimpleApiController {
         private String phone_number;
         private String address;  //Main
 
-        private String Geospace_Version;
+        private String Geospace_Version; //main 2차
 
 
         private version_locator_tag version_locator_tag;
