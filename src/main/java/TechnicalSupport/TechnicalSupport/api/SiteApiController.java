@@ -16,13 +16,6 @@ public class SiteApiController {
 
     private final SiteService siteService;
 
-    private int pulltest;
-
-
-
-
-
-
     @GetMapping("/api/getSite")
     public Result getSite() {
 

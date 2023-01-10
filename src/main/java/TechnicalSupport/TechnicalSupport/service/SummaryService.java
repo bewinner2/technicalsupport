@@ -4,17 +4,23 @@ package TechnicalSupport.TechnicalSupport.service;
 import TechnicalSupport.TechnicalSupport.domain.Site;
 import TechnicalSupport.TechnicalSupport.domain.Summary;
 import TechnicalSupport.TechnicalSupport.domain.version_locator_tag;
+import TechnicalSupport.TechnicalSupport.repository.SummaryRepository;
+import TechnicalSupport.TechnicalSupport.repository.SummarySearch;
 import TechnicalSupport.TechnicalSupport.repository.siteRepository;
 import TechnicalSupport.TechnicalSupport.repository.version_locator_tag_Repository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 @Transactional(readOnly = true)
 @RequiredArgsConstructor
 public class SummaryService {
 
+
+    private final SummaryRepository summaryRepository;
     private final siteRepository siteRepository;
     private final version_locator_tag_Repository version_locator_tag_repository;
 
@@ -41,5 +47,12 @@ public class SummaryService {
 
         return summary.getId();
     }
+
+    public List<Summary> findSummary(SummarySearch summarySearch) {
+        return summaryRepository.findAllByString(summarySearch);
+    }
+
+
+
 
 }

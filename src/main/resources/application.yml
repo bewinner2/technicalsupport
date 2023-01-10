@@ -5,6 +5,15 @@ spring: #띄어쓰기 없음
     password: 1234
     driver-class-name: org.h2.Driver
 
+#  naver:
+#    url:
+#      search:
+#        local: https://openapi.naver.com/v1/search/local.json
+#        image: https://openapi.naver.com/v1/search/image
+#    client:
+#      id: Zi3o1uQftp59zuIqEAz4
+#      secret: iy6YKSWpLM
+
   jpa: #띄어쓰기 2칸
     hibernate: #띄어쓰기 4칸
       ddl-auto: none #띄어쓰기 6칸
@@ -17,3 +26,6 @@ logging: #띄어쓰기 없음
   level:
     org.hibernate.SQL: debug #띄어쓰기 2칸
     org.hibernate.type: trace #띄어쓰기 2칸
+
+
+

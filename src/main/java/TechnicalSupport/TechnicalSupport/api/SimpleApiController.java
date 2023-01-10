@@ -48,19 +48,14 @@ public class SimpleApiController {
     @Data
     static class SimpleSiteDto {
 
-//        private Long siteId;
-//        private String name;
-//        private LocalDateTime siteDate; //주문시간
-//        private OrderStatus siteStatus;
-//        private Address address;
 
-        private Long siteId;   //siteId 주석추가 3번째         얹혀서 4번째 추가또!!
+        private Long siteId;
         private String site_name;
         private String employee_name;
         private String phone_number;
-        private String address;  //Main
+        private String address;
 
-        private String Geospace_Version; //main 2차
+        private String Geospace_Version;
 
 
         private version_locator_tag version_locator_tag;

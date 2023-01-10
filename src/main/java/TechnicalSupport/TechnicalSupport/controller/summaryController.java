@@ -2,7 +2,10 @@ package TechnicalSupport.TechnicalSupport.controller;
 
 
 import TechnicalSupport.TechnicalSupport.domain.Site;
+import TechnicalSupport.TechnicalSupport.domain.Summary;
 import TechnicalSupport.TechnicalSupport.domain.version_locator_tag;
+//import TechnicalSupport.TechnicalSupport.repository.OrderSearch;
+import TechnicalSupport.TechnicalSupport.repository.SummarySearch;
 import TechnicalSupport.TechnicalSupport.service.SiteService;
 import TechnicalSupport.TechnicalSupport.service.SummaryService;
 import TechnicalSupport.TechnicalSupport.service.version_locator_tag_Service;
@@ -10,6 +13,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -37,12 +41,20 @@ public class summaryController {
 
     }
 
-//    @PostMapping(value="/order")
-//    public String order(@RequestParam("site_Id") String site_Id, @RequestParam("version_locator_tag_id") Long version_locator_tag_id){
-//
-//        summaryService.show(site_Id, version_locator_tag_id);
-//        return "redirect:/orders";
-//
-//    }
+    @PostMapping(value="/order")
+    public String order(@RequestParam("site_Id") Long site_Id, @RequestParam("version_locator_tag_id") Long version_locator_tag_id){
+
+        summaryService.show(site_Id, version_locator_tag_id);
+        return "redirect:/orders";
+
+    }
+
+    @GetMapping("/orders")
+    public String orderList(@ModelAttribute("summarySearch") SummarySearch summarySearch, Model model) {
+        List<Summary> orders = summaryService.findSummary(summarySearch);
+        model.addAttribute("orders", orders);
+
+        return "order/orderList";
+    }
 
 }
