@@ -25,6 +25,4 @@ public class version_locator_tag_Service {
     public version_locator_tag findOne(Long version_locator_tag_Id) {
         return version_locator_tag_repository.findOne(version_locator_tag_Id);
     }
-
-
 }
