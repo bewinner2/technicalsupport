@@ -16,6 +16,16 @@ public class SiteApiController {
 
     private final SiteService siteService;
 
+<<<<<<< HEAD
+=======
+    private int pushtest;
+
+
+
+
+
+
+>>>>>>> parent of 5bacd8c (pull Test)
     @GetMapping("/api/getSite")
     public Result getSite() {
 
